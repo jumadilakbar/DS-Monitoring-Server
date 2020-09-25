@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class HostController extends Controller
 {
-    // 
-    //
+    
     public function index()
     {
     	// mengambil data dari table Host
@@ -16,6 +15,15 @@ class HostController extends Controller
  
     	// mengirim data Host ke view index
     	return view('admin.host.index',['list_data' => $list_data]);
+ 
+    }
+    public function index_pegawai()
+    {
+    	// mengambil data dari table Host
+    	$list_data = DB::table('host')->get();
+ 
+    	// mengirim data Host ke view index
+    	return view('pegawai.host.index',['list_data' => $list_data]);
  
     }
     public function tambah()

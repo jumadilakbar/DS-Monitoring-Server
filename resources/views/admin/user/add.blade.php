@@ -11,7 +11,7 @@
                     </div>
                     <div>
                         User Management 
-                    
+                     
                         <div class="page-title-subheading">This is an example dashboard created using build-in elements and components.
                         </div>
                     </div>
@@ -25,7 +25,9 @@
                     <div class="card-body"><h5 class="card-title">Form Tambah User</h5>
                     <hr>
                         <form class="" action="/admin/user/store" method="post">
-                        {{ csrf_field() }}
+                        <!-- {{ csrf_field() }} -->
+                            <input type="hidden" name="remember_token" value="{{csrf_token()}}">
+                            @csrf
 
                             <div class="position-relative row form-group">
                                 <label for="exampleEmail" class="col-sm-2 col-form-label">Nama User</label>
@@ -37,7 +39,7 @@
                             </div>
                             <div class="position-relative row form-group">
                                 <label for="exampleEmail" class="col-sm-2 col-form-label">Password</label>
-                                <div class="col-sm-10"><input name="phone" placeholder="password" type="password" class="form-control"></div>
+                                <div class="col-sm-10"><input name="password" placeholder="password" type="password" class="form-control"></div>
                             </div>
                             <div class="position-relative row form-group">
                                 <label for="exampleEmail" class="col-sm-2 col-form-label">No HP</label>

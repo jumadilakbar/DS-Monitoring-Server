@@ -63,7 +63,7 @@ class Kernel extends HttpKernel
 
         'player' => \App\Http\Middleware\Player::class,
         'admin' => \App\Http\Middleware\Admin::class,
-        'superadmin' => \App\Http\Middleware\SuperAdmin::class,
+        'pegawai' => \App\Http\Middleware\Pegawai::class,
         'scout' => \App\Http\Middleware\Scout::class,
         'team' => \App\Http\Middleware\Team::class,
         'academy' => \App\Http\Middleware\Academic::class,

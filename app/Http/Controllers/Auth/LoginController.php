@@ -52,7 +52,7 @@ class LoginController extends Controller
                 return $this->redirectTo;
                 break;
             case 1:
-                $this->redirectTo = '/superadmin';
+                $this->redirectTo = '/pegawai';
                 return $this->redirectTo;
                 break;
             default:

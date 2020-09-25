@@ -49,8 +49,15 @@ Route::post('/admin/notifikasi/update','NotifikasiController@update')->name('adm
 Route::get('/admin/notifikasi/detail/{id_notifkasi}','NotifikasiController@detail')->name('admin')->middleware('admin');
 Route::get('/admin/notifikasi/hapus/{id_notifkasi}','NotifikasiController@hapus')->name('admin')->middleware('admin');
 
+// Punya Pegawai
+Route::get('/pegawai', 'PegawaiController@index')->name('pegawai')->middleware('pegawai');
+// Pegawai Host
+Route::get('/pegawai/host', 'HostController@index_pegawai')->name('pegawai')->middleware('pegawai');
+// Pegawai notifikasi
+Route::get('/pegawai/notifikasi', 'NotifikasiController@index_pegawai')->name('pegawai')->middleware('pegawai');
+// Pegawai report
+Route::get('/pegawai/report', 'ReportController@index_pegawai')->name('pegawai')->middleware('pegawai');
 
-Route::get('/superadmin', 'SuperAdminController@index')->name('superadmin')->middleware('superadmin');
 Route::get('/scout', 'ScoutController@index')->name('scout')->middleware('scout');
 Route::get('/team', 'TeamController@index')->name('team')->middleware('team');
 Route::get('/academy', 'AcademicController@index')->name('academy')->middleware('academy');

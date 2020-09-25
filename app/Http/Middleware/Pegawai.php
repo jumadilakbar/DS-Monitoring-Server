@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Auth;
 use Closure;
 
-class SuperAdmin
+class Pegawai
 {
     /**
      * Handle an incoming request.

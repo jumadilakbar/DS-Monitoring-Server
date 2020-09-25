@@ -12,11 +12,14 @@ class ReportController extends Controller
     //
     public function index()
     {
-    	// mengambil data dari table user
-    	$list_data = DB::table('report')->get();
- 
-    	// mengirim data pegawai ke view index
+    	$list_data = DB::table('report')->get(); 
     	return view('admin.report.index',['list_data' => $list_data]);
+ 
+    }
+    public function index_pegawai()
+    {
+    	$list_data = DB::table('report')->get(); 
+    	return view('pegawai.report.index',['list_data' => $list_data]);
  
     }
 }

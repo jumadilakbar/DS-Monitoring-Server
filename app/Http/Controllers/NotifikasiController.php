@@ -16,6 +16,15 @@ class NotifikasiController extends Controller
     	return view('admin.notifikasi.index',['list_data' => $list_data]);
  
     }
+    public function index_pegawai()
+    {
+    	// mengambil data dari table notifikasi
+    	$list_data = DB::table('notifikasi')->get();
+ 
+    	// mengirim data notifikasi ke view index
+    	return view('pegawai.notifikasi.index',['list_data' => $list_data]);
+ 
+    }
     public function tambah()
     {
     	return view('admin.notifikasi.add');

@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are in SUPERADMIN Dashboard!
+                    You are in Pegawai Dashboard!
                 </div>
             </div>
         </div>

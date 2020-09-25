@@ -21,7 +21,7 @@ class Player
         }
 
         if (Auth::user()->role == 1) {
-            return redirect()->route('superadmin');
+            return redirect()->route('pegawai');
         }
 
         if (Auth::user()->role == 5) {
