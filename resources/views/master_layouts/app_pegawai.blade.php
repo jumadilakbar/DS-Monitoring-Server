@@ -181,10 +181,7 @@
                                     </a>
                                 </li>
                                 <li class="app-sidebar__heading">Management</li>
-                                
-                                <li>
-                                    <a href="{{ url('/pegawai/report') }}">
-                                        <i class="metismenu-icon pe-7s-rocket"></i>
+                                                  <i class="metismenu-icon pe-7s-rocket"></i>
                                         Laporan 
                                     </a>
                                 </li>

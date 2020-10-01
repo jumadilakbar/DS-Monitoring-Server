@@ -31,19 +31,40 @@
                         <table id="example" class="mb-0 table">
                             <thead>
                             <tr>
-                                <th>Host Name</th>
+                                <th>IP Address</th>
+                                <th>Komponen</th>
+                                <th>Used</th>
+                                <th>Status</th>
                                 <th>Time</th>
-                                <th>Problem</th>
-                                <th>Down Time</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($list_data as $p)
                             <tr>
-                                <th scope="row">{{ $p->Hostname }}</th>
-                                <td>{{ $p->Time }}</td>
-                                <td>{{ $p->Problem }}</td>
-                                <td>{{ $p->Downtime }}</td>
+                                <th scope="row">{{ $p->ip_address }}</th>
+                                <td>{{ $p->used }}</td>
+                                <td>{{ $p->komponen }} %</td>
+                                @if($p->status =='Normal')         
+                                    <td >
+                                        <div class="badge badge-success">
+                                        {{ $p->status }}    
+                                        </div>
+                                    </td>
+                                @elseif($p->status =='Warning')
+                                    <td>
+                                        <div class="badge badge-warning">
+                                        {{ $p->status }}
+                                        </div>
+                                    </td>
+                                @else
+                                    <td>
+                                     <div class="badge badge-danger">
+                                     {{ $p->status }}
+                                     </div>
+                                    </td>
+
+                                @endif
+                                <td>{{ $p->time_mtr }}</td>
                                
                             </tr>
                             @endforeach

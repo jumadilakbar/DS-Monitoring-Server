@@ -12,7 +12,7 @@ class ReportController extends Controller
     //
     public function index()
     {
-    	$list_data = DB::table('report')->get(); 
+    	$list_data = DB::table('data_host_monitoring')->orderBy('time_mtr', 'DESC')->get(); 
     	return view('admin.report.index',['list_data' => $list_data]);
  
     }
